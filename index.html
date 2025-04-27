@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Filtration</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/compromise"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Text Filtration & Summarization</h1>
+        <div class="input-section">
+            <div class="input-container">
+                <textarea id="inputText" placeholder="Enter your text here to filter stop words and get a summarized version..."></textarea>
+                <button id="micButton" class="mic-button" title="Click to start recording">
+                    <i class="fas fa-microphone"></i>
+                </button>
+            </div>
+            <div class="filters">
+                <button onclick="filterText()" class="primary-btn">Filter & Summarize Text</button>
+                <button onclick="clearText()" class="secondary-btn">Clear</button>
+            </div>
+        </div>
+        <div class="stats-section">
+            <div class="stat">
+                <span id="originalWords">0</span>
+                <label>Original Words</label>
+            </div>
+            <div class="stat">
+                <span id="filteredWords">0</span>
+                <label>Filtered Words</label>
+            </div>
+            <div class="stat">
+                <span id="reductionPercent">0%</span>
+                <label>Reduction</label>
+            </div>
+        </div>
+        <div class="output-section">
+            <h2>Filtered Text:</h2>
+            <div id="outputText" class="output"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
